@@ -1,0 +1,23 @@
+'use server';
+type NewsletterResponse = {
+  status: string;
+  message: string;
+};
+export async function postEmail(email: string): Promise<NewsletterResponse> {
+  try {
+    const response = await fetch(
+      `${process.env.INTERNAL_BACKEND_URL}/newsletter`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      },
+    );
+    const data = await response.json();
+    return data; //어짜피 status, message 담겨서 옮.
+  } catch (error) {
+    return { status: 'fail', message: 'Next.js error' };
+  }
+}

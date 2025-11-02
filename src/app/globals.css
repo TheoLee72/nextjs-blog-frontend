@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+
+:root {
+  --white: #fafaf8;
+  --black: #1a1a1a;
+  --gray: #eceae4;
+  --textgray: #667085;
+  --blue: #2563eb;
+  --red: #EB2525;
+}
+
+@theme inline {
+  /*prefix 중요*/
+  --color-white: var(--white);
+  --color-black: var(--black);
+  --color-gray: var(--gray);
+  --color-blue: var(--blue);
+  --color-textgray: var(--textgray);
+  --color-red: var(--red);
+  --font-basic: var(--font-inter);
+  --font-serif: var(--font-noto-serif);
+  --spacing-fluid: var(--fluid-padding);
+}
+
+@layer base {
+  body {
+    @apply font-basic font-normal text-black bg-white;
+  }
+  .menu-btn {
+    @apply block relative w-[32px] h-[24px] flex flex-col justify-between items-center py-[4px] md:hidden;
+  }
+  .bar {
+    @apply w-[24px] h-[3px] bg-black rounded transition-all duration-300;
+  }
+  h1 {
+    @apply text-3xl font-semibold;
+  }
+  h2 {
+    @apply text-2xl font-semibold;
+  }
+  h3 {
+    @apply text-xl font-semibold;
+  }
+}
+/* 활성화 상태 */
+.menu-btn.active .bar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.menu-btn.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active .bar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+
+
+@layer utilities {
+  /* Chrome, Safari, Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* IE, Edge, Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .no-preflight {
+    all: revert;
+  }
+
+  .no-preflight * {
+    all: revert;
+  }
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
