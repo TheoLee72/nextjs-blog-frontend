@@ -19,8 +19,14 @@ export default function AboutPage() {
       <p className="text-[24px] mt-[20px]">Tech Stack & Interests</p>
       <p className="text-[16px] mt-[10px]">
         My primary passion lies in Web Development, and my blog itself is a
-        hands-on showcase, built using Next.js for the frontend and Rust (Axum),
-        PostgreSQL, Redis, gRPC, vLLM for the backend. I&apos;m actively
+        hands-on showcase, built using Next.js for the <a href="https://github.com/TheoLee72/nextjs-blog-frontend"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue underline">frontend(repo link)</a> and Rust (Axum),
+        PostgreSQL, Redis, gRPC, vLLM for the <a href="https://github.com/TheoLee72/rust-axum-blog-project"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue underline">backend(repo link)</a>. I&apos;m actively
         exploring high-performance, modern full-stack development.
       </p>
       <p className="text-[16px] mt-[10px]">

@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  output: 'standalone',
+  outputFileTracingIncludes: {
+    '/': ['node_modules/jsdom/**'],
+  },
 };
 
 export default nextConfig;
