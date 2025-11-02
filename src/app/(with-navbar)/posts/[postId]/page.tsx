@@ -62,20 +62,6 @@ export default async function PostPage({
   // 변환된 HTML 추출
   const highlightedContent = $.html();
 
-  // DOMPurify로 sanitize (선택사항)
-  // DOMPurify.addHook('uponSanitizeElement', (node, data) => {
-  //   // iframe 이면서 src가 지정된 YouTube 주소만 허용
-  //   if (data.tagName === 'iframe') {
-  //     if (node.src && node.src.startsWith('https://www.youtube.com/embed/')) {
-  //       // 허용: 속성 강제 제한
-  //       node.setAttribute('allowfullscreen', 'allowfullscreen');
-  //       node.removeAttribute('frameborder'); // 필요시 제거
-  //     } else {
-  //       // YouTube 아니면 삭제
-  //       node.parentNode && node.parentNode.removeChild(node);
-  //     }
-  //   }
-  // });
 
   const sanitizedHTML = DOMPurify.sanitize(highlightedContent, {
     ADD_TAGS: ['iframe'],
@@ -108,7 +94,7 @@ export default async function PostPage({
             />
           </div>
           <span className="flex flex-col justify-center text-[14px] mr-[8px]">
-            64
+            0
           </span>
         </div>
         <div className="border-[1px] rounded-[10px] border-gray h-[42px] flex flex-row">
@@ -122,7 +108,7 @@ export default async function PostPage({
             />
           </div>
           <span className="flex flex-col justify-center text-[14px] mr-[8px]">
-            64
+            0
           </span>
         </div>
         <div className="border-[1px] rounded-[10px] border-gray h-[42px] flex flex-row">
@@ -136,7 +122,7 @@ export default async function PostPage({
             />
           </div>
           <span className="flex flex-col justify-center text-[14px] mr-[8px]">
-            64
+            0
           </span>
         </div>
       </div>

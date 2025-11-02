@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import EmailButton from '../_components/EmailButton';
 export default function AboutPage() {
   return (
@@ -7,7 +6,7 @@ export default function AboutPage() {
       <div className="w-full h-[74px]"></div>
       <p className="text-[24px]">About Me: Theo Lee</p>
       <p className="text-[16px] mt-[10px]">
-        Welcome to my personal blog! I’m Theo L ee, a Computer Science and
+        Welcome to my personal blog! I’m Theo Lee, a Computer Science and
         Engineering student at Seoul National University (SNU), and this is
         where I document my journey in programming and my thoughts on the tech
         industry.
@@ -29,11 +28,17 @@ export default function AboutPage() {
         at the Alliance Students’ Venture Forum (ASVF), where my
         teammates(김지수, 김동건, 성재용, 신민규, 엄선우, 차신국) and I
         developed &quot;Fillow,&quot; a product that orchestrates various AI
-        APIs into a unified service. Leveraging this experience, I created an AI
+        APIs into a unified service. </p>
+      <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+        <source src="/fillow.mp4" type="video/mp4" /></video>
+      <p className="text-[16px] mt-[10px]">
+        Leveraging this experience, I created an AI
         planner application designed to optimize study schedules for college
         applicants, a project that earned me selection in the U300 Startup
         Competition.
       </p>
+      <video autoPlay muted loop playsInline className="w-full h-full object-cover">
+        <source src="/aiplanner.mp4" type="video/mp4" /></video>
       <p className="text-[24px] mt-[20px]">What&apos;s Next</p>
       <p className="text-[16px] mt-[10px]">
         My immediate goal is to build an AI Crawler that will intelligently
